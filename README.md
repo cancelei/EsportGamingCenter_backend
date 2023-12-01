@@ -92,7 +92,7 @@ TBA...
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[You can see the Live Demo Here.](https://rentals-app-egry.onrender.com/) 💻📲
+[Under Construction](TBA) 💻📲
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
