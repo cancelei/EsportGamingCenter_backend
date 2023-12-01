@@ -177,11 +177,11 @@ rspec ./spec/models
 - Twitter: [@gardyelontiga45](https://twitter.com/gardyelontiga45)
 - LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimycharles/)
 
-👨🏼‍🚀 **Team Member 3** 🐱‍👤
+👤 **Luis Emilio Rojas Rojas**
 
-- GitHub: [@](link)
-- Twitter: [@](link)
-- LinkedIn: [@](link)
+- [GitHub](https://github.com/lerfast)
+- [Twitter](https://twitter.com/lerfast)
+- [LinkedIn](https://www.linkedin.com/in/luis-emilio-rojas-rojas-6ba90a8a/)
 
 👨🏼‍🚀 **Team Member 4** 🧙🏼‍♂️
 
