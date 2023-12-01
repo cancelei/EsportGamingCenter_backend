@@ -171,12 +171,11 @@ rspec ./spec/models
 - GitHub: [@JuanDiegoGuerra](https://github.com/JuanDiegoGuerra)
 - Twitter: [@jdxelric147](https://twitter.com/jdxelric147)
 - LinkedIn: [Juan Guerra](https://www.linkedin.com/in/juan-guerra-65076b1ba/)
-
-👨🏼‍🚀 **Team Member 2** 🕵🏼‍♂️
-
-- GitHub: [@](link)
-- Twitter: [@](link)
-- LinkedIn: [@](link)
+  
+> 👤 **Gardimy Charles**
+- GitHub: [@Gardimy](https://github.com/Gardimy)
+- Twitter: [@gardyelontiga45](https://twitter.com/gardyelontiga45)
+- LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimycharles/)
 
 👨🏼‍🚀 **Team Member 3** 🐱‍👤
 
