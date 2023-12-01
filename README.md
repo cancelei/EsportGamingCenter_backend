@@ -172,7 +172,7 @@ rspec ./spec/models
 - Twitter: [@jdxelric147](https://twitter.com/jdxelric147)
 - LinkedIn: [Juan Guerra](https://www.linkedin.com/in/juan-guerra-65076b1ba/)
   
-> 👤 **Gardimy Charles**
+👤 **Gardimy Charles** 🐱‍👤
 - GitHub: [@Gardimy](https://github.com/Gardimy)
 - Twitter: [@gardyelontiga45](https://twitter.com/gardyelontiga45)
 - LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimycharles/)
