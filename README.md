@@ -183,11 +183,11 @@ rspec ./spec/models
 - [Twitter](https://twitter.com/lerfast)
 - [LinkedIn](https://www.linkedin.com/in/luis-emilio-rojas-rojas-6ba90a8a/)
 
-👨🏼‍🚀 **Team Member 4** 🧙🏼‍♂️
+👨🏼‍🚀 **Abel Lavieri** 🧙🏼‍♂️
 
-- GitHub: [@](link)
-- Twitter: [@](link)
-- LinkedIn: [@](link)
+- [GitHub](https://github.com/alvp01)
+- [Twitter](https://twitter.com/alvp01)
+- [LinkedIn](https://www.linkedin.com/in/abel-lavieri)
 
 👨🏼‍🚀 **Team Member 5** 🦸🏼‍♂️
 
