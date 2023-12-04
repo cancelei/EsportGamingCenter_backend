@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :games, only: [:index]
+  resources :games do
+    resources :reservations, only: [:index]
+  end
+  
   resources :reservations, only: [:index]
   resources :users, only: [:index]
 
