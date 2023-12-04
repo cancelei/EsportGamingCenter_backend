@@ -1,0 +1,21 @@
+<%= link_to 'New Game', new_game_path %>
+
+<!-- Display the list of games -->
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.description %></td>
+        <td><%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
