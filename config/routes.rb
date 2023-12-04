@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   end
   
   resources :reservations, only: [:index]
-  resources :users, only: [:index]
 
   root 'games#index'
 end
