@@ -20,6 +20,7 @@ module EsportGamingCenterBackend
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
+	config.action_controller.raise_on_missing_callback_actions = false
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
