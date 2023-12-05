@@ -1,4 +1,4 @@
-# app/models/reservation.rb
+# app/models/reservation.rb:
 
 class Reservation < ApplicationRecord
   

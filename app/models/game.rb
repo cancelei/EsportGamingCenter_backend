@@ -1,4 +1,4 @@
-# app/models/game.rb
+# app/models/game.rb:
 
 class Game < ApplicationRecord
   
