@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+#  before_action :authenticate_user!
   before_action :set_game, only: [:destroy]
 
   def index
@@ -10,7 +11,7 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
+    @game = current_user.games.build(game_params)
 
     if @game.save
       redirect_to games_path, notice: 'Game was successfully added.'
@@ -20,8 +21,12 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @game.destroy
-    redirect_to games_path, notice: 'Game was successfully deleted.'
+    if current_user == @game.user
+      @game.destroy
+      redirect_to games_path, notice: 'Game was successfully deleted.'
+    else
+      redirect_to games_path, alert: 'You are not authorized to delete this game.'
+    end
   end
 
   private
