@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-	before_action :set_game, only: [:destroy]
+  before_action :set_game, only: [:destroy]
 
   def index
     @games = Game.all
@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
 
     if @game.save
-      redirect_to games_path, notice: 'Game was successfully added.'
+      redirect_to games_path, notice: 'Game was successfully created.'
     else
       render :new
     end
@@ -21,7 +21,7 @@ class GamesController < ApplicationController
 
   def destroy
     @game.destroy
-    redirect_to games_path, notice: 'Game was successfully deleted.'
+    redirect_to games_url, notice: 'Game was successfully destroyed.'
   end
 
   private
