@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'custom_sessions' }
+  
+  devise_for :users, controllers: {
+    sessions: 'sessions',
+    registrations: 'registrations'
+  }
 
   resources :games do
-    resources :reservations, only: [:index, :create, :show]
+    resources :reservations, only: [:index]
   end
-
-  resources :reservations, only: [:index, :create, :show, :update, :destroy]
-  resources :users, only: [:index, :show]
+  
+  resources :reservations, only: [:index]
 
   root 'games#index'
 end
