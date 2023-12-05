@@ -1,9 +1,10 @@
 <div class="games-container">
-  <ul class="game">
+  <ul class="game-list">
     <% @games.each do |game| %>
-		<li class="game-item">
+      <li class="game-item">
         <div class="game-card">
-            <div class="game-name">
+          <div class="game-details">
+            <div class="game-name-date">
               <h2><%= game.title %></h2>
               <p class="game-description"><%= game.description %></p>
             </div>
@@ -11,7 +12,8 @@
               <%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
             </div>
           </div>
-		  </li>
+        </div>
+      </li>
     <% end %>
   </ul>
 </div>
