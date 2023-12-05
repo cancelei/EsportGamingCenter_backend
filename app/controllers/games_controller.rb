@@ -1,13 +1,13 @@
 class GamesController < ApplicationController
-#  before_action :authenticate_user!
+  before_action :authenticate_user!
   before_action :set_game, only: [:destroy]
 
   def index
-    @games = Game.all
+    @games = current_user.games
   end
 
   def new
-    @game = Game.new
+    @game = current_user.games.build
   end
 
   def create
@@ -32,7 +32,7 @@ class GamesController < ApplicationController
   private
 
   def set_game
-    @game = Game.find(params[:id])
+    @game = current_user.games.find(params[:id])
   end
 
   def game_params
