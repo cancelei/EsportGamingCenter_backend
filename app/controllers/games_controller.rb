@@ -3,8 +3,6 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-	#puts "Number of games: #{@games.count}" 
-	#logger.debug "Games: #{@games.inspect}"
   end
 
   def new
