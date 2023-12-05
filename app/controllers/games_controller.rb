@@ -3,9 +3,7 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
-	#puts "Number of games: #{@games.count}" 
-	#logger.debug "Games: #{@games.inspect}"
-	render :index
+    render json: @games
   end
 
   def new
