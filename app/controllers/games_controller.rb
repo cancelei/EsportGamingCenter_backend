@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:destroy]
 
+
   def index
     @games = Game.all
     render json: @games
