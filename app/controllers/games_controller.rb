@@ -1,7 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:destroy]
 
-
   def index
     @games = Game.all
     render json: @games
@@ -33,6 +32,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-    params.require(:game).permit(:title, :description)
+    params.require(:game).permit(:title, :description, :image_url)
   end
 end
