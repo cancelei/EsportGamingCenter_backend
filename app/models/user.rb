@@ -1,18 +1,10 @@
-class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+class User < ApplicationRecord
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
 
-  def index
-    @users = User.all
-    render json: @users
-  end
+  has_many :games, dependent: :destroy
+  has_many :reservations, dependent: :destroy
 
-  def show
-    render json: @user
-  end
-
-  private
-
-  def set_user
-    @user = User.find(params[:id])
-  end
+  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true
 end
