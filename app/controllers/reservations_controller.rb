@@ -1,5 +1,3 @@
-# app/controllers/reservations_controller.rb:
-
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show]
 
