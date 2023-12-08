@@ -1,17 +1,17 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: luis
-  password: luis123
-  host: localhost
+  username: <%= ENV['DB_USER'] %>
+  password: <%= ENV['DB_PSW'] %>
+  port: <%= ENV['DB_PORT'] %>
 
 development:
   <<: *default
-  database: gaming
+  database: <%= ENV['DB_NAME_DEV'] %>
 
 test:
   <<: *default
-  database: gaming_test
+  database: <%= ENV['DB_NAME_TEST'] %>
 
 production:
   <<: *default
