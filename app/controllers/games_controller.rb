@@ -1,28 +1,30 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:destroy]
 
+  
   def index
     @games = Game.all
     render json: @games
   end
 
-  def new
-    @game = Game.new
-  end
-
+ 
   def create
     @game = Game.new(game_params)
 
     if @game.save
-      redirect_to games_path, notice: 'Game was successfully created.'
+      render json: @game, status: :created
     else
-      render :new
+      render json: @game.errors, status: :unprocessable_entity
     end
   end
 
+  
   def destroy
-    @game.destroy
-    redirect_to games_url, notice: 'Game was successfully destroyed.'
+    if @game.destroy
+      head :no_content
+    else
+      render json: @game.errors, status: :unprocessable_entity
+    end
   end
 
   private
@@ -32,6 +34,6 @@ class GamesController < ApplicationController
   end
 
   def game_params
-	params.require(:game).permit(:title, :description, :image)
+    params.require(:game).permit(:title, :description, :image_url)
   end  
 end
