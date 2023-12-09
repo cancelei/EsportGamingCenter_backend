@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   resources :games
   resources :reservations
+
+  namespace :api do
+    resources :games
+  end
 end
