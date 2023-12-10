@@ -1,12 +1,15 @@
 module Api
   class GamesController < ApplicationController
-  before_action :set_game, only: [:destroy]
+    before_action :set_game, only: [:show, :destroy]
 
     def index
       @games = Game.all
       render json: @games
     end
 
+    def show
+      render json: @game
+    end
 
     def create
       @game = Game.new(game_params)
@@ -17,7 +20,6 @@ module Api
         render json: @game.errors, status: :unprocessable_entity
       end
     end
-
 
     def destroy
       if @game.destroy
