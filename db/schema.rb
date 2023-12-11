@@ -42,6 +42,8 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_11_141631) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "game_id"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
