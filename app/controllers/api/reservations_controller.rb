@@ -3,8 +3,8 @@ module Api
     before_action :set_reservation, only: [:show, :update, :destroy]
 
     def index
-      @reservations = Reservation.all
-      render json: @reservations
+      @reservations = Reservation.all.includes(:game)
+      render json: @reservations.as_json(include: :game)
     end
 
     def show
@@ -37,7 +37,7 @@ module Api
     private
 
     def reservation_params
-      params.require(:reservation).permit(:reservation_date, :setup_config, :game_id, :user_id, :status)
+      params.require(:reservation).permit(:reservation_date, :setup_config, :game_id, :user_id, :status, :platform)
     end
 
     def set_reservation
