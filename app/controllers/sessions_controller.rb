@@ -3,8 +3,12 @@ class SessionsController < Devise::SessionsController
 
     def create
       user = warden.authenticate!(auth_options)
-      token = Tiddle.create_and_return_token(user, request)
-      render json: { authentication_token: token }
+      if user 
+        token = Tiddle.create_and_return_token(user, request, expires_in: 1.day)
+        render json: { token: token, user_email: user.email }, status: 200
+      else
+        render json: { error: "Unauthorized" }, status: 401
+      end
     end
   
     def destroy
