@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # Rutas para la API (posiblemente para el frontend)
   namespace :api do
+    resources :reservations, only: [:index, :show, :create, :update, :destroy]
     resources :games, only: [:index, :show, :create, :update, :destroy]
   end
 end
