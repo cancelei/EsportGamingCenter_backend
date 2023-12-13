@@ -1,7 +1,6 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/reservations', type: :request do
-
   # GET /api/reservations
   path '/api/reservations' do
     get('list reservations') do
@@ -42,11 +41,13 @@ RSpec.describe 'api/reservations', type: :request do
           platform: { type: :string },
           status: { type: :string }
         },
-        required: ['game_id', 'reservation_date', 'setup_config', 'platform', 'status']
+        required: %w[game_id reservation_date setup_config platform status]
       }
 
       response(201, 'reservation created') do
-        let(:reservation) { { game_id: 1, reservation_date: '2023-01-01', setup_config: 'PC', platform: 'PC', status: 'Pending' } }
+        let(:reservation) do
+          { game_id: 1, reservation_date: '2023-01-01', setup_config: 'PC', platform: 'PC', status: 'Pending' }
+        end
         run_test!
       end
 
@@ -88,7 +89,9 @@ RSpec.describe 'api/reservations', type: :request do
 
       response(200, 'successful') do
         let(:id) { 1 }
-        let(:reservation) { { reservation_date: '2023-01-02', setup_config: 'Updated Config', platform: 'Xbox', status: 'Confirmed' } }
+        let(:reservation) do
+          { reservation_date: '2023-01-02', setup_config: 'Updated Config', platform: 'Xbox', status: 'Confirmed' }
+        end
         run_test!
       end
     end

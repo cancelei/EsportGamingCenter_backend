@@ -8,5 +8,4 @@ class User < ApplicationRecord
   has_many :authentication_tokens, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
-
 end
