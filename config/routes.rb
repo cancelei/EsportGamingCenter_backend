@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount Rswag::Ui::Engine => '/api-docs'
+  mount Rswag::Api::Engine => '/api-docs'
   # Rutas para Devise, manejo de sesiones y registros
   devise_for :users, controllers: {
     registrations: 'registrations', # Controlador personalizado para el registro
