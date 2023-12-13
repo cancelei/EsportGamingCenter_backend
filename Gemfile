@@ -14,6 +14,12 @@ gem 'devise'
 gem 'tiddle'
 gem 'activestorage'
 gem 'rack-cors'
+gem 'rspec-rails'
+gem 'rswag'
+gem 'rswag-api'
+gem 'rswag-ui'
+
+
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -52,4 +58,3 @@ group :development do
   # gem "spring"
   gem 'letter_opener'
 end
-
