@@ -5,10 +5,6 @@
   <h1><b>Esport Gaming Center</b></h1><a name="about-project"></a>
 </div>
 
-<div>
- <img src="">
-</div>
-
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
