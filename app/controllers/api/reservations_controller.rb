@@ -13,11 +13,15 @@ module Api
 
     def create
       @reservation = Reservation.new(reservation_params)
-
-      if @reservation.save
-        render json: @reservation, status: :created
+    
+      if User.exists?(@reservation.user_id)
+        if @reservation.save
+          render json: @reservation, status: :created
+        else
+          render json: @reservation.errors, status: :unprocessable_entity
+        end
       else
-        render json: @reservation.errors, status: :unprocessable_entity
+        render json: { error: "User not found" }, status: :not_found
       end
     end
 
