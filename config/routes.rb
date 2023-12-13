@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   }
 
   # Rutas estándar para juegos y reservas
-  resources :games
-  resources :reservations, only: [:index, :show, :create, :update, :destroy]
+  # resources :games
+  # resources :reservations, only: [:index, :show, :create, :update, :destroy]
 
   # Rutas para la API (posiblemente para el frontend)
   namespace :api do

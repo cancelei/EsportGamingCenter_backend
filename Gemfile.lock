@@ -269,6 +269,8 @@ DEPENDENCIES
   rails (~> 7.1.2)
   rspec-rails
   rswag
+  rswag-api
+  rswag-ui
   tiddle
   tzinfo-data
 
