@@ -13,7 +13,7 @@ module Api
 
     def create
       @reservation = Reservation.new(reservation_params)
-    
+
       if User.exists?(@reservation.user_id)
         if @reservation.save
           render json: @reservation, status: :created
