@@ -152,7 +152,7 @@ rails db:drop db:create db:migrate
 To run tests, run the following command:
 
 ```sh
-rspec ./spec/models
+rake rswag:specs:swaggerize
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
