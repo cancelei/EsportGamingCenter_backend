@@ -146,7 +146,9 @@ To run the project, execute the following command:
 rails db:drop db:create db:migrate
 ./bin/dev
 ```
-Then, you have to create in the root of the project a .env file:
+Then, you have to create in the root of the project a .env file: <br>
+
+
 ![Alt text](image.png)
 
 , inside of that file, you must put the following code:
