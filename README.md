@@ -207,11 +207,9 @@ rake rswag:specs:swaggerize
 - [Twitter](https://twitter.com/alvp01)
 - [LinkedIn](https://www.linkedin.com/in/abel-lavieri)
 
-👨🏼‍🚀 **Team Member 5** 🦸🏼‍♂️
+👨🏼‍🚀 **Glauber Bannwart** 🦸🏼‍♂️
 
-- GitHub: [@](link)
-- Twitter: [@](link)
-- LinkedIn: [@](link)
+- GitHub: [@cancelei](https://github.com/cancelei)
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
