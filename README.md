@@ -151,21 +151,21 @@ Then, you have to create in the root of the project a .env file: <br>
 
 ![Alt text](image.png)
 
-, inside of that file, you must put the following code:
+, inside of that file, you must put the following code: <br>
 
-DB_USER = 'postgress_database_user'         **Note:** this it has to be as string ''
-DB_PSW = 'postgress_database_user_password' **Note:** this it has to be as string ''
-DB_PORT = your_postgress_port               **Note:** this it has to be as an integer
-DB_NAME_DEV = 'name_of_your_DB'             **Note:** this it has to be as string ''
-DB_NAME_TEST ='name_of_your_DB_test'        **Note:** this it has to be as string ''
+DB_USER = 'postgress_database_user'         **Note:** this it has to be as string '' <br>
+DB_PSW = 'postgress_database_user_password' **Note:** this it has to be as string '' <br>
+DB_PORT = your_postgress_port               **Note:** this it has to be as an integer <br>
+DB_NAME_DEV = 'name_of_your_DB'             **Note:** this it has to be as string '' <br>
+DB_NAME_TEST ='name_of_your_DB_test'        **Note:** this it has to be as string '' <br>
 
-**Example:**
+**Example:** <br>
 
-DB_USER = 'luis'
-DB_PSW = 'luis123'
-DB_PORT = 5432
-DB_NAME_DEV = 'gaming'
-DB_NAME_TEST ='gaming_test'
+DB_USER = 'luis' <br>
+DB_PSW = 'luis123' <br>
+DB_PORT = 5432 <br>
+DB_NAME_DEV = 'gaming' <br>
+DB_NAME_TEST ='gaming_test' <br>
 
 
 ![Alt text](image-1.png)
