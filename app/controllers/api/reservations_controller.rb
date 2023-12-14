@@ -36,7 +36,7 @@ module Api
     def destroy
       if @reservation.destroy
       head :no_content
-	  else
+      else
         render json: @reservation.errors, status: :unprocessable_entity
       end
     end
