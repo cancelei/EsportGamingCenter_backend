@@ -5,9 +5,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def respond_with(resource, _opts = {})
     if resource.persisted?
-      render json: { status: { code: 200, message: 'Registrado exitosamente.' }, data: resource }
+      render json: { status: { code: 200, message: 'Registered successfully.' }, data: resource }
     else
-      render json: { status: { message: 'El usuario no pudo ser creado.' } }, status: :unprocessable_entity
+      render json: { status: { message: 'The user could not be created.' } }, status: :unprocessable_entity
     end
   end
 end
