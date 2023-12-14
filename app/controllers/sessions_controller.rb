@@ -26,8 +26,4 @@ class SessionsController < Devise::SessionsController
   def respond_to_on_destroy
     head :no_content
   end
-
-  def verify_signed_out_user
-    # Implementación específica si es necesaria
-  end
 end
