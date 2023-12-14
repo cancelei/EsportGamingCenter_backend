@@ -2,14 +2,7 @@
 
 <div align="center">
   <br/>
-  <img src="" width="300"  height="auto" />
-  <br/>
-  <br/>
   <h1><b>Esport Gaming Center</b></h1><a name="about-project"></a>
-</div>
-
-<div>
- <img src="">
 </div>
 
 # 📗 Table of Contents
@@ -36,9 +29,8 @@
   - [📝 License ](#-license-)
 
 # 📖🚗 Esport Gaming Center App <a name="about-project"></a>
-
-TBA...
-
+This project involves developing an eSports reservation system with two distinct parts: the Backend, developed using Ruby on Rails, and the Frontend, built with React. This system aims to cater to eSports players, allowing them to reserve games, manage reservations, and access a catalog of available games.
+ Click on the link[https://github.com/cancelei/EsportGamingCenter_frontend] to navigate to the backend of our APP.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -154,13 +146,39 @@ To run the project, execute the following command:
 rails db:drop db:create db:migrate
 ./bin/dev
 ```
+Then, you have to create in the root of the project a .env file: <br>
+
+
+![Alt text](image.png)
+
+, inside of that file, you must put the following code: <br>
+
+DB_USER = 'postgress_database_user'         **Note:** this it has to be as string '' <br>
+DB_PSW = 'postgress_database_user_password' **Note:** this it has to be as string '' <br>
+DB_PORT = your_postgress_port               **Note:** this it has to be as an integer <br>
+DB_NAME_DEV = 'name_of_your_DB'             **Note:** this it has to be as string '' <br>
+DB_NAME_TEST ='name_of_your_DB_test'        **Note:** this it has to be as string '' <br>
+
+**Example:** <br>
+
+DB_USER = 'luis' <br>
+DB_PSW = 'luis123' <br>
+DB_PORT = 5432 <br>
+DB_NAME_DEV = 'gaming' <br>
+DB_NAME_TEST ='gaming_test' <br>
+
+
+![Alt text](image-1.png)
+
+
+
 
 ### Run tests
 
 To run tests, run the following command:
 
 ```sh
-rspec ./spec/models
+rake rswag:specs:swaggerize
 ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,11 +207,9 @@ rspec ./spec/models
 - [Twitter](https://twitter.com/alvp01)
 - [LinkedIn](https://www.linkedin.com/in/abel-lavieri)
 
-👨🏼‍🚀 **Team Member 5** 🦸🏼‍♂️
+👨🏼‍🚀 **Glauber Bannwart** 🦸🏼‍♂️
 
-- GitHub: [@](link)
-- Twitter: [@](link)
-- LinkedIn: [@](link)
+- GitHub: [@cancelei](https://github.com/cancelei)
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

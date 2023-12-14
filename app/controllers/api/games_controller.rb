@@ -1,6 +1,6 @@
 module Api
   class GamesController < ApplicationController
-    before_action :set_game, only: [:show, :destroy]
+    before_action :set_game, only: %i[show destroy]
 
     def index
       @games = Game.all

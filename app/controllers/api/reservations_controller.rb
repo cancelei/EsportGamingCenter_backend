@@ -1,6 +1,6 @@
 module Api
   class ReservationsController < ApplicationController
-    before_action :set_reservation, only: [:show, :update, :destroy]
+    before_action :set_reservation, only: %i[show update destroy]
 
     def index
       @reservations = Reservation.all.includes(:game)
@@ -13,7 +13,7 @@ module Api
 
     def create
       @reservation = Reservation.new(reservation_params)
-    
+
       if User.exists?(@reservation.user_id)
         if @reservation.save
           render json: @reservation, status: :created
@@ -21,7 +21,7 @@ module Api
           render json: @reservation.errors, status: :unprocessable_entity
         end
       else
-        render json: { error: "User not found" }, status: :not_found
+        render json: { error: 'User not found' }, status: :not_found
       end
     end
 
@@ -34,8 +34,11 @@ module Api
     end
 
     def destroy
-      @reservation.destroy
-      head :no_content
+      if @reservation.destroy
+        head :no_content
+      else
+        render json: @reservation.errors, status: :unprocessable_entity
+      end
     end
 
     private

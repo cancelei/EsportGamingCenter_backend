@@ -1,0 +1,158 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/games":
+    get:
+      summary: list games
+      responses:
+        '200':
+          description: successful
+    post:
+      summary: create game
+      responses:
+        '200':
+          description: successful
+  "/api/games/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: string
+    get:
+      summary: show game
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update game
+      responses:
+        '200':
+          description: successful
+    put:
+      summary: update game
+      responses:
+        '200':
+          description: successful
+    delete:
+      summary: delete game
+      responses:
+        '200':
+          description: successful
+  "/api/reservations":
+    get:
+      summary: list reservations
+      tags:
+      - Reservations
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    game_id:
+                      type: integer
+                    user_id:
+                      type: integer
+                    reservation_date:
+                      type: string
+                      format: date
+                    setup_config:
+                      type: string
+                    platform:
+                      type: string
+                    status:
+                      type: string
+    post:
+      summary: create reservation
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '201':
+          description: reservation created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                game_id:
+                  type: integer
+                reservation_date:
+                  type: string
+                  format: date
+                setup_config:
+                  type: string
+                platform:
+                  type: string
+                status:
+                  type: string
+              required:
+              - game_id
+              - reservation_date
+              - setup_config
+              - platform
+              - status
+  "/api/reservations/{id}":
+    parameters:
+    - name: id
+      in: path
+      description: id
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: show reservation
+      tags:
+      - Reservations
+      responses:
+        '200':
+          description: successful
+    patch:
+      summary: update reservation
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '200':
+          description: successful
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                reservation_date:
+                  type: string
+                  format: date
+                setup_config:
+                  type: string
+                platform:
+                  type: string
+                status:
+                  type: string
+    delete:
+      summary: delete reservation
+      tags:
+      - Reservations
+      responses:
+        '204':
+          description: successful
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000
