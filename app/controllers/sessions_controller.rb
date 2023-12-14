@@ -4,9 +4,9 @@ class SessionsController < Devise::SessionsController
   def create
     user = warden.authenticate!(auth_options)
     if user
-      token = Tiddle.create_and_return_token(user, request, expires_in: 1.day)
+      user_token = Tiddle.create_and_return_token(user, request, expires_in: 1.day)
       # Incluir el userId en la respuesta
-      render json: { token: token, user_email: user.email, user_id: user.id, is_admin: user.is_admin }, status: 200
+      render json: { token: user_token, user_email: user.email, user_id: user.id, is_admin: user.is_admin }, status: 200
     else
       render json: { error: 'Unauthorized' }, status: 401
     end
