@@ -14,7 +14,7 @@ module Api
     def create
       @game = Game.new(game_params)
 
-      if @game.save
+      if current_user.is_admin && @game.save
         render json: @game, status: :created
       else
         render json: @game.errors, status: :unprocessable_entity
@@ -22,7 +22,7 @@ module Api
     end
 
     def destroy
-      if @game.destroy
+      if current_user.is_admin && @game.destroy
         head :no_content
       else
         render json: @game.errors, status: :unprocessable_entity
