@@ -3,7 +3,7 @@ module Api
     before_action :set_reservation, only: %i[show update destroy]
 
     def index
-      @reservations = Reservation.all.includes(:game)
+      @reservations = Reservation.where(user_id: params[:user_id]).includes(:game)
       render json: @reservations.as_json(include: :game)
     end
 
